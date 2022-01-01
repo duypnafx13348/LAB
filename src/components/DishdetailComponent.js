@@ -16,12 +16,12 @@ import dateFormat from 'dateformat';
         );
     }
 
-    function RenderComments(comments) {
+    function RenderComments({comments}) {
         if (comments != null) {
             return(
                 <div className="col-12 col-md-5 m-1">
                     <h4>Comments</h4>
-                    <ul className="list-unstyled">
+                    <ul>
                         {comments.map((comment) => {
                             return(
                                 <li key={comment.id}>
@@ -40,7 +40,7 @@ import dateFormat from 'dateformat';
         }
     }
 
-    const DishDetail= (props) => {
+    const DishDetail = (props) => {
         if (props.dish != null) {
             return(
                 <div className="container">
