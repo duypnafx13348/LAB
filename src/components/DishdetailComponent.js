@@ -46,17 +46,17 @@ import { Link } from 'react-router-dom';
             return(
                 <div className="container">
                     <div className="row">
-                    <Breadcrumb>
-                        <BreadcrumbItem>
-                            <Link to="/menu">Menu</Link>
-                        </BreadcrumbItem>
-                        <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
-                    </Breadcrumb>
-                    <div className="col-12">
-                        <h3>{props.dish.name}</h3>
-                        <hr />
+                        <Breadcrumb>
+                            <BreadcrumbItem>
+                                <Link to="/menu">Menu</Link>
+                            </BreadcrumbItem>
+                            <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
+                        </Breadcrumb>
+                        <div className="col-12">
+                            <h3>{props.dish.name}</h3>
+                            <hr />
+                        </div>
                     </div>
-                </div>
                     <div className="row">
                         <RenderDish dish={props.dish} />
                         <RenderComments comments={props.comments} />
