@@ -31,11 +31,6 @@ const mapDispatchToProps = (dispatch) => ({
 
 class Main extends Component {
 
-  constructor(props) {
-    super(props);
-
-  }
-
   componentDidMount() {
     this.props.fetchDishes();
     this.props.fetchComments();
@@ -73,7 +68,7 @@ class Main extends Component {
       <div>
         <Header />
           <TransitionGroup>
-            <CSSTransition key={this.props.location.key} className="page" timeout={300}>
+            <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
               <Switch location={this.props.location}>
                 <Route path="/home" component={HomePage} />
                 <Route exact path="/aboutus" component={() => <About leaders={this.props.leaders} />} />
